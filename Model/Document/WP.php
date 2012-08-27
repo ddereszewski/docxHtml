@@ -4,10 +4,14 @@ namespace DocxHtml\Model\Document;
 use DocxHtml\Model\Document\Base;
 require_once realpath(dirname(__FILE__) .'/Model.php' ) ;
 
-class WBody extends Model  {
+class WP extends Model  {
 	
 	public function draw(){
-		return $this->drawChildren();
+		$html = '<p>';
+		$html .= $this->drawChildren();
+		$html .= '</p>';
+		
+	 	return $html;
 	}
-	
+
 }
