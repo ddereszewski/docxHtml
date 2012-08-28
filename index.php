@@ -2,7 +2,7 @@
 
 <form method="post" enctype="multipart/form-data">
 	<input type="file" name="docx" />
-	<button type="submit">Send DOCX file</button>
+	<button type="submit">Parse DOCX file</button>
 </form>
 <hr />
 <?php 

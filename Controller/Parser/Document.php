@@ -1,6 +1,12 @@
 <?php
 
 namespace DocxHtml\Controller\Parser;
+use DocxHtml\Model\Attributes\WI;
+
+require_once realpath(dirname(__FILE__) . '/../../Model/Attributes/WI.php');
+use DocxHtml\Model\Document\WBr;
+require_once realpath(dirname(__FILE__) . '/../../Model/Document/WBr.php');
+
 use DocxHtml\Model\Attributes\WB;
 require_once realpath(dirname(__FILE__) . '/../../Model/Attributes/WB.php');
 
@@ -89,6 +95,12 @@ class Document extends Parser {
 		
 		return $r;
 	}
+	
+	private function parseBr($parent, $xml){
+		$r = new WBr();
+	
+		return $r;
+	}
 
 	private function parseAttrT($parent, $xml){	
 		$parent->setValue( new WT((string)$xml ) );
@@ -106,6 +118,10 @@ class Document extends Parser {
 	
 	private function parseAttrB($parent, $xml){
 		$parent->setAttribute(new WB());
+	}
+	
+	private function parseAttrI($parent, $xml){
+		$parent->setAttribute(new WI());
 	}
 	
 }

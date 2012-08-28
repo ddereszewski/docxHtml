@@ -8,18 +8,22 @@ class WR extends Model  {
 	
 	protected $value;
 	
-	public function setAttribute($attribute){
-		$this->attributes[] = $attribute;
-	}
-	
 	public function setValue($val){
 		$this->value = $val;
 	}
 	
 	public function draw(){
-		$html = $this->value;
+		$html = '';
+		if($this->attributes->hasAttributes()){
+			$html .= '<span style="' .$this->attributes .'" >';
+		}
+		
+		$html .= $this->value;
 		$html .= $this->drawChildren();
-	//	$html .= '</r>';
+
+		if($this->attributes->hasAttributes()){
+			$html .= '</span>';
+		}
 		
 	 	return $html;
 	}

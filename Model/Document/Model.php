@@ -3,6 +3,9 @@
 namespace DocxHtml\Model\Document;
 
 
+use DocxHtml\Model\Attributes\AttributeHolder;
+require_once realpath(dirname(__FILE__) .'/../Attributes/AttributeHolder.php' ) ;
+
 use DocxHtml\Interfaces\IDrawable;
 require_once realpath(dirname(__FILE__) .'/../IDrawable.php' ) ;
 
@@ -21,7 +24,7 @@ class Model implements IDrawable{
 	public function __construct($parent = null){
 		$this->children = array();
 		$this->parent = $parent;
-		$this->attributes = array();
+		$this->attributes = new AttributeHolder();
 	}
 	
 	public function draw(){
@@ -41,7 +44,7 @@ class Model implements IDrawable{
 	}
 	
 	public function setAttribute($attribute){
-		$this->attributes[] = $attribute;
+		$this->attributes->addAttribute($attribute);
 	}
 	
 	

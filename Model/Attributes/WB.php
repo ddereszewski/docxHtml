@@ -16,4 +16,9 @@ class WB extends Attribute {
 		
 	}
 	
+	
+	public function __toString(){
+		return 'font-weight: bold';
+	}
+	
 }

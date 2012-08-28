@@ -36,6 +36,9 @@ class Docx {
 	private function unZip(){
 		$this->zip = new \ZipArchive();
 		$this->zip->open($this->docxPath);
+		if($this->zip->getStatusString() == false){
+			throw new \Exception('Invalid file type');
+		}
 	}
 	
 	private function parseDocument(){

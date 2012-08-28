@@ -10,4 +10,11 @@ class Attribute {
 		$this->value = $val;
 	}
 	
+	/**
+	 * return style value
+	 */
+	public function __toString(){
+		
+	}
+	
 }
