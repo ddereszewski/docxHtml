@@ -1,5 +1,5 @@
 <?php
-namespace DocxHtml\Interfaces;
+namespace DocxHtml\Model;
 
 interface IDrawable {
 	

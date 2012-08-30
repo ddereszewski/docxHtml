@@ -2,7 +2,6 @@
 namespace DocxHtml\Model\Attributes;
 
 use DocxHtml\Model\Attributes\Attribute;
-require_once realpath(dirname(__FILE__) .'/Attribute.php' ) ;
 
 
 /**

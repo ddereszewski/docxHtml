@@ -3,24 +3,14 @@
 namespace DocxHtml\Controller\Parser;
 use DocxHtml\Model\Attributes\WI;
 
-require_once realpath(dirname(__FILE__) . '/../../Model/Attributes/WI.php');
 use DocxHtml\Model\Document\WBr;
-require_once realpath(dirname(__FILE__) . '/../../Model/Document/WBr.php');
-
 use DocxHtml\Model\Attributes\WB;
-require_once realpath(dirname(__FILE__) . '/../../Model/Attributes/WB.php');
-
 use DocxHtml\Model\Document\WBody;
-require_once realpath(dirname(__FILE__) . '/../../Model/Document/WBody.php');
 use DocxHtml\Model\Document\WP;
-require_once realpath(dirname(__FILE__) . '/../../Model/Document/WP.php');
 use DocxHtml\Model\Document\WR;
-require_once realpath(dirname(__FILE__) . '/../../Model/Document/WR.php');
 use DocxHtml\Model\Attributes\WT;
-require_once realpath(dirname(__FILE__) . '/../../Model/Attributes/WT.php');
 
 use DocxHtml\Controller\Parser;
-require_once "Controller/Parser.php";
 
 class Document extends Parser {
 

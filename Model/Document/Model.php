@@ -4,10 +4,7 @@ namespace DocxHtml\Model\Document;
 
 
 use DocxHtml\Model\Attributes\AttributeHolder;
-require_once realpath(dirname(__FILE__) .'/../Attributes/AttributeHolder.php' ) ;
-
-use DocxHtml\Interfaces\IDrawable;
-require_once realpath(dirname(__FILE__) .'/../IDrawable.php' ) ;
+use DocxHtml\Model\IDrawable;
 
 class Model implements IDrawable{
 

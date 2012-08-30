@@ -9,7 +9,6 @@ namespace DocxHtml\Model;
  *
  */
 use DocxHtml\Controller\Parser\Document;
-require_once "Controller/Parser/Document.php";
 
 class Docx {
 
@@ -19,8 +18,16 @@ class Docx {
 	 */
 	private $docxPath;
 	
+	/**
+	 * zip handler
+	 * @var unknown_type
+	 */
 	private $zip;
 	
+	/**
+	 * model based document 
+	 * @var Document
+	 */
 	private $document;
 	
 	
