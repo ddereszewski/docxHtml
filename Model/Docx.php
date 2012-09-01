@@ -8,6 +8,10 @@ namespace DocxHtml\Model;
  * @author DawidDereszewski
  *
  */
+use DocxHtml\Controller\DocumentModelWalker;
+
+use DocxHtml\Controller\DrawWalker;
+
 use DocxHtml\Controller\Parser\Document;
 
 class Docx {
@@ -57,8 +61,16 @@ class Docx {
 	}
 	
 	public function render(){
+		$this->optymize();
 		$model = $this->document->getModel();
+		
 		return $model->draw();
+	}
+	
+	public function optymize(){
+		$dmw = new DocumentModelWalker($this->document->getModel());
+		$dmw->optimize();
+		
 	}
 	
 	

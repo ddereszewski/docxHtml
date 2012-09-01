@@ -13,14 +13,14 @@ class WR extends Model  {
 	
 	public function draw(){
 		$html = '';
-		if($this->attributes->hasAttributes()){
+		if($this->attributes->hasAttributes() && $this->attributes->isFirst()){
 			$html .= '<span style="' .$this->attributes .'" >';
 		}
 		
 		$html .= $this->value;
 		$html .= $this->drawChildren();
 
-		if($this->attributes->hasAttributes()){
+		if($this->attributes->isLast()){
 			$html .= '</span>';
 		}
 		

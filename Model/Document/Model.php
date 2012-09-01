@@ -44,5 +44,20 @@ class Model implements IDrawable{
 		$this->attributes->addAttribute($attribute);
 	}
 	
+	public function getAttributes(){
+		return $this->attributes;
+	}
+	
+	public function getChildren(){
+		return $this->children;
+	}
+	
+	public function getNthChildern($no){
+		if(isset($this->children[$no])){
+			return $this->children[$no];
+		}
+		return null;
+	}
+	
 	
 }
