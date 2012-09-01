@@ -61,6 +61,6 @@ class docxHtml {
 spl_autoload_register(function ($class) {
 	
 	$class = str_replace('\\', '/', $class);
-	$class = str_replace('DocxHtml/', '/', $class);
+	$class = str_replace('DocxHtml/', '', $class);
 	include_once  $class . '.php';
 });
